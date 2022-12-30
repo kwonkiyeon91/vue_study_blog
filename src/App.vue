@@ -1,17 +1,60 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled">Disabled</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <router-view :blogData="blogData"></router-view>
+
+    <router-link to="/list">리스트 페이지</router-link>
+    
+   <!-- <ListView :blogData="blogData[i]" v-for="(data, i) in blogData" :key="data"/> -->
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+//import ListView from './components/ListView.vue'
+import blog from './assets/blog.js'
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
+  name: "App",
+  components: {//ListView
+  },
+  data() {
+    return {
+      blogData: blog
+    }
   }
-}
+};
 </script>
 
 <style>

@@ -33,7 +33,9 @@
       </div>
     </nav>
 
-    <router-view :blogData="blogData"></router-view>
+    <div class="mt-4">
+      <router-view :blogData="blogData"></router-view>
+    </div>
 
     <router-link to="/list">리스트 페이지</router-link>
     

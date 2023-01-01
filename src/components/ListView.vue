@@ -1,7 +1,7 @@
 <template>
   <div class="data-list" v-for="(data, i) in blogData" :key="data">
     <div>
-      <h5>{{blogData[i].title}}</h5>
+      <h5 @click="$router.push('detail/'+i)">{{blogData[i].title}}</h5>
       <p>{{blogData[i].date}}</p>
       <div>
         {{blogData[i].content}}

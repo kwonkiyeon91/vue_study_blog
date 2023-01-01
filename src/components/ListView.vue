@@ -23,4 +23,8 @@ export default {
 .data-list {
   margin-bottom: 50px;
 }
+
+.data-list h5 {
+  cursor: pointer;
+}
 </style>

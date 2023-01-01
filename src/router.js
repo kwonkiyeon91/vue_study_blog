@@ -1,4 +1,5 @@
 import { createWebHistory, createRouter } from "vue-router";
+import HomeView from "./components/HomeView.vue"
 import ListView from "./components/ListView.vue"
 import TitleView from "./components/TitleView.vue"
 import DetailView from "./components/DetailView.vue"
@@ -7,6 +8,10 @@ import AutorView from "./components/AutorView.vue"
 import CommentView from "./components/CommentView.vue"
 
 const routes = [
+  {
+    path: "/home",
+    component: HomeView,
+  },
   {
     path: "/list",
     component: ListView,

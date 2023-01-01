@@ -1,43 +1,10 @@
 <template>
   <div>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">Navbar</a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item active">
-            <a class="nav-link" href="#"
-              >Home <span class="sr-only">(current)</span></a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Features</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Pricing</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled">Disabled</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+    <HeaderView />
 
     <div class="mt-4">
       <router-view :blogData="blogData"></router-view>
     </div>
-
-    <router-link to="/list">리스트 페이지</router-link>
     
    <!-- <ListView :blogData="blogData[i]" v-for="(data, i) in blogData" :key="data"/> -->
   </div>
@@ -46,10 +13,12 @@
 <script>
 //import ListView from './components/ListView.vue'
 import blog from './assets/blog.js'
+import HeaderView from './components/HeaderView.vue'
 
 export default {
   name: "App",
-  components: {//ListView
+  components: {
+    HeaderView
   },
   data() {
     return {
@@ -66,6 +35,5 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
